@@ -60,7 +60,7 @@ Key functions and logic:
 
 ### Extract 3x3 pixel neighborhood
 ### Flatten 2D list or tuple to 1D
-# ## Apply convolution using mask
+### Apply convolution using mask
 
 ## Expected Output
 The program prints “True result” if the output matches the reference result.
