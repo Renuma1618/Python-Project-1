@@ -58,22 +58,9 @@ The result is verified against a reference implementation using `scipy`, and bot
 Key functions and logic:
 
 
-# Extract 3x3 pixel neighborhood
-def get_slice_2d_list(pixel_values, pos):
- return [pixel_values[i][pos[1]-1:pos[1]+2] for i in range(pos[0]-1,pos[0]+2)]
-
-# Flatten 2D list or tuple to 1D
-def flatten(pixels_data):
- return [k for i in pixels_data for k in i]
-
-# Apply convolution using mask
-for i in range(1, len(pixel_values) - 1):
- for j in range(1, len(pixel_values[0]) - 1):
-     patch = get_slice_2d_list(pixel_values, (i, j))
-     patch_flat = flatten(patch)
-     mask_flat = flatten(mask)
-     multiplied = list(map(lambda x, y: x * y, patch_flat, mask_flat))
-     new_pixel_values[i - 1][j - 1] = sum(multiplied)
+### Extract 3x3 pixel neighborhood
+### Flatten 2D list or tuple to 1D
+# ## Apply convolution using mask
 
 ## Expected Output
 The program prints “True result” if the output matches the reference result.
