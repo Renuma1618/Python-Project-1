@@ -80,3 +80,4 @@ The program prints “True result” if the output matches the reference result.
 Displays two images side by side:
 Original grayscale image
 Edge-detected image
+
